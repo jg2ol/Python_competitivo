@@ -1,15 +1,21 @@
 # cálculo do mdc entre dois números, o método mais rápido (método de Euclides)
 
-a = int(input())
-b = int(input())
+a = int(input("a = "))
+b = int(input("b = "))
 
-anterior = a
-atual = b
-resto = anterior % atual
+aorig = a
+borig = b
 
-while resto != 0:
-    anterior = atual
-    atual = resto
-    resto = anterior % atual
+r = a%b
+if r == 0:
+    mdc = min(a, b)
 
-print(f"O mdc entre {a} e {b} é {atual}.")
+while r != 0:
+    mdc = r
+    a = b
+    b = r
+    r = a%b
+
+print(f"O mdc entre {aorig} e {borig} é {mdc}.")
+print(f"{aorig}/{mdc} = {aorig/mdc}")
+print(f"{borig}/{mdc} = {borig/mdc}")

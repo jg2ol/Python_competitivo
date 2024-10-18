@@ -141,3 +141,23 @@ def fatorial(n):
         fat *= x
     return fat
 
+
+def mdc(a, b):
+    '''
+    Função que retorna o maior divisor comum entre dois números inteiros
+    :a: um dos valores em que se quer comparar
+    :b: o outro número, determinando a comparação
+    :return: o mdc entre a e b
+    '''
+    r = a%b
+    if r == 0:
+        mdc = min(a, b)
+    else:
+        while r != 0:
+            mdc = r
+            a = b
+            b = r
+            r = a%b
+        mdc = r
+    return mdc
+
