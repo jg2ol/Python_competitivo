@@ -1,5 +1,5 @@
 # Código que verifica a equação:
-# 1/n = p'n/(10^α(p'n) - k), onde α(x) -> nº de algarismos de x
+# 1/n = p'n/(10^α(p'n) - k), onde α(x) é o nº de algarismos de x
 
 k = int(input("k: "))
 p0 = input("p0: ")

@@ -1,25 +1,18 @@
 # Insira os números e descubra o período da fração
 
-a = input("a: ")
-b = input("b: ")
-r = len(b)
+a = input("Valor inicial: ")
+r = int(input("Razão da P.G.: "))
+q = int(input("Nº de alg. a serem considerados: ")) # Distância entre as somas
 
-if int(b) < int(a):
-    temp = a
-    a = b
-    b = a
+while r > len(a):
+    a += "0"
 
-while len(b) > len(a):
-    a = "0" + a
+op = int(input("Nº de operações (nº bem grande): "))
+res = int(a)
 
-a = int(a)
-b = int(b)
-k = int(b/a//1)
-
-res = 0
-q = int(input("q: "))
-for x in range(0, q):
-    a *= k
-    res = res*10**r + a
+temp = int(a)
+for x in range(0, op):
+    temp *= r
+    res = res*10**q + temp
 
 print(res)
