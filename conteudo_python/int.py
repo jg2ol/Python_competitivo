@@ -13,3 +13,11 @@ exp = num1**num2
 print(soma)
 print(divisao)
 print(exp)
+
+# bin(num) --> representação binária de um número
+# oct(num) --> representação octal de um número
+# hex(num) --> representação hexadecimal de um número
+# também funcionam para float's
+print(bin(1005))
+print(oct(1005))
+print(hex(1005))

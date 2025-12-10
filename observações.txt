@@ -1,0 +1,15 @@
+bin(num) também funciona para números não inteiros
+
+atenção quanto às aproximações
+
+é possível mudar o escopo de variáveis com prefixos: global, nonlocal, ...
+
+atribuições aumentadas também funcionam com bits: &=, ^=, <<=, >>=
+
+Trutry e Falsy são valores booleanos inerentes e que todo valor possui um
+
+valores falsy: "" ou '', 0, 0.0, False, None
+
+a função sorted() sempre retorna uma LISTA e não altera o objeto original
+a mesma aceita parâmetros como key (função que define a organização) e reverse (bool)
+

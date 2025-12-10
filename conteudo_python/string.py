@@ -19,10 +19,12 @@ print(str1[1:7:2]) # dando "saltos" de 2 em 2
 print(str1[::-1]) # invertendo a string
 
 # .upper() --> retorna a string com todos as suas letras em maiúsculas
+# .isupper() --> verifica se a string está em maiúsculas
 up = str1.upper()
 print(up)
 
 # .lower() --> retorna a string com todos as suas letras em minúsculas
+# .islower() --> verifica se a string está em minúsculas
 low = str1.lower()
 print(low)
 
@@ -51,8 +53,8 @@ print(str3.split('a')[2])
 print(str1.replace("Olá", "Alô"))
 print(str1.replace("O", "b"))
 
-# .join() --> une string's de uma lista a uma string
-lista = ["bom", "dia"]
+# .join() --> une string's de uma lista colocando uma string entre todas as pertencentes à lista
+lista = ["bom", "dia", "à", "todos"]
 str4 = " ".join(lista)
 print(str4)
 
