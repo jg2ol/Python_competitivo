@@ -6,10 +6,15 @@ atenção quanto às aproximações
 
 atribuições aumentadas também funcionam com bits: &=, ^=, <<=, >>=
 
-Trutry e Falsy são valores booleanos inerentes e que todo valor possui um
-
+Trutry e Falsy são valores booleanos inerentes e que todo valor possui um.
 valores falsy: "" ou '', 0, 0.0, False, None
 
 a função sorted() sempre retorna uma LISTA e não altera o objeto original
 a mesma aceita parâmetros como key (função que define a organização) e reverse (bool)
 
+em dicionários, percorrê-lo utilizando o [nome] é o mesmo que percorrê-lo usando [nome].keys()
+
+ao usar "\d" para representar dígitos em strings, deve-se usar r"\d" para não resultar em erro
+
+a função all() recebe um iterator e retorna True se todos os elementos do iterator são trutry
+caso contrário, retorna False

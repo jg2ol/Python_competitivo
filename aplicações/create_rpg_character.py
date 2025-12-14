@@ -1,5 +1,3 @@
-** start of main.py **
-
 def create_character(name, STR, INT, CHA):
     if not isinstance(name, str):
         return "The character name should be a string"
@@ -39,7 +37,4 @@ def create_character(name, STR, INT, CHA):
     str_return += f"{aux_str}\n{aux_int}\n{aux_cha}"
     return str_return
 
-create_character("ren", 1, 2, 4)
-
-** end of main.py **
-
+print(create_character("ren", 1, 2, 4))

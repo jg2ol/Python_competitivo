@@ -85,3 +85,28 @@ print(type(zip_aux))
 zip_list = list(zip_aux)
 print(zip_list)
 
+# list comprehension --> resumo de um código que cria uma lista
+lista1 = [x for x in range(0, 21) if x%2 == 1]
+print(lista1)
+
+# filter() --> usa uma condição e uma lista para criar um iterável
+def impar(x):
+    return bool(x%2)
+
+lista2 = list(filter(impar, range(0, 21)))
+print(lista2)
+
+# map() --> generalização da filter, ao invés de aceitar uma condição, a map()
+# aplica uma função qualquer a items de um iterável
+def afim(x):
+    return 2*x-3
+
+lista3 = list(map(afim, range(0, 21)))
+print(lista3)
+
+# código que recebe três strings e transforma para int
+num1, num2, num3 = map(int, input("Digite três números: ").split())
+print(num1, num2, num3)
+
+# sum() --> soma dos elementos de um iterável, também aceita parâmetro que é somado à soma calculada
+print(sum(lista3, start = 1)) # é o mesmo que sum(lista3) + 1
