@@ -30,7 +30,7 @@ try:
     ano = int(input("Digite o ano: "))
     if ano < 0:
         raise TypeError("O ano deve ser um inteiro maior que zero.")
-except ValueError as e:
+except ValueError:
     print(f"Erro: O dia, o mês e o ano devem ser números inteiros.")
 except TypeError as e:
     print(f"Erro: {e}")
@@ -77,7 +77,7 @@ class book:
 book1 = book("Metamorfose", 120)
 book2 = book("Dom Quixote", 1597)
 print(len(book1))
-print(str(book2))
+print(book2)
 print(book1 == book2)
 
 # getattr() --> função que retorna um atributo de um objeto
