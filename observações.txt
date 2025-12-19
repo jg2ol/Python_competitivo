@@ -18,3 +18,5 @@ ao usar "\d" para representar dígitos em strings, deve-se usar r"\d" para não 
 
 a função all() recebe um iterator e retorna True se todos os elementos do iterator são trutry
 caso contrário, retorna False
+
+ValueError, TypeError, ... são subclasses de Exceptions

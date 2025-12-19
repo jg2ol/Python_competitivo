@@ -88,3 +88,35 @@ cat_obj = Cat("Mary")
 print(animal_obj.sound())
 print(cat_obj.sound())
 print(cat_obj.superior_sound())
+
+# Abstração --> Abstract Base Class (ABC), apenas uma organização do código 
+# utilizando a abstração, as classes filhas devem ter todos os métodos e atributos da classe pai
+from abc import ABC, abstractmethod
+
+class abs_Animal(ABC):
+    @abstractmethod # decorador de abc
+    def make_sound(self):
+        # nenhum retorno é necessário
+        # estamos apenas dizendo que todas as classes filhas devem ter o método 'make_sound()'
+        pass
+
+class dog(abs_Animal):
+    def __init__(self, name):
+        self.name = name
+    def make_sound(self):
+        return f"Eu sou {self.name}, woof woof!"
+
+class cat(abs_Animal):
+    def __init__(self, name):
+        self.name = name
+    def make_sound(self):
+        return f"Eu sou {self.name}, meau!"
+
+"""
+class bird(abs_Animal):
+    pass
+
+bird1 = bird()
+"""
+# TypeError: Can't instantiate abstract class Bird 
+# without an implementation for abstract method 'make_sound'
