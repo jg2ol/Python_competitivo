@@ -13,6 +13,11 @@ class Wallet:
        if 0 < amount <= self._balance:
            self.__balance -= amount
 
+# obs: quando prefixamos com dunder, o python muda de '__[atributo]' para '_[nome_classe]__[atributo]'
+# para evitar confusão de funções/atributos em casos de polimorfismo
+wallet_obj = Wallet(14)
+print(wallet_obj._Wallet__balance)
+
 # getters --> propriedades para pegar os dados de objetos
 # setters --> propriedades para modificar os atributos de um objeto mesmo quando seus dados estão "ocultos"
 # deleter --> retira um atributo de um objeto
@@ -29,7 +34,7 @@ class Circle:
         return self._radius
     
     # setter que modifica o valor do atributo de instância '_radius'
-    @radius.setters # apenas para deixar claro qual o objetivo dessa função
+    @radius.setter # apenas para deixar claro qual o objetivo dessa função
     def radius(self, value):
         if value <= 0:
             raise ValueError("O raio deve ser positivo.")
@@ -58,3 +63,28 @@ try:
     print(circle_obj.radius)
 except AttributeError as e:
     print(f"Erro: {e}")
+
+# Polimorfismo --> quando geramos uma classe (pai) como 'parâmetro' de outra (filha)
+# "classe pai"
+class Animal:
+    def sound(self):
+        return "Algum som de animal."
+
+# "classe filha"
+class Cat(Animal):
+    def __init__(self, name):
+        self.name = name
+
+    def sound(self):
+        return "Meau"
+    
+    # super() --> referencia o valor para funções/atributos da classe pai
+    def superior_sound(self):
+        return super().sound() # este 'sound()' vem de 'Animal'
+
+animal_obj = Animal()
+cat_obj = Cat("Mary")
+
+print(animal_obj.sound())
+print(cat_obj.sound())
+print(cat_obj.superior_sound())
