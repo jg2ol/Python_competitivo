@@ -82,3 +82,17 @@ print(type(tradutor))
 # obs: sensível à minúsculas e maiúsculas
 str5 = str2.translate(tradutor)
 print(str5)
+
+# tabulação de strings --> propriedades para tabular textos/informações
+# utiliza-se f-strings para modificá-las como necessário
+# < --> alinhamento à esquerda
+print(f"{"bom dia":<30}")
+
+# > --> alinhamento à direita
+print(f"{"bom dia":>30}")
+
+# ^ --> centralizado
+print(f"{"bom dia":^30}")
+
+# todos os métodos aceitam separador (padrão = " ")
+print(f"{"bom dia":*^30}")

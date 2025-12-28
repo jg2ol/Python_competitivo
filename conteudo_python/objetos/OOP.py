@@ -29,7 +29,7 @@ class Circle:
     def __init__(self, radius):
         self._radius = radius
     
-    @property # serve apenas para indicar que a função abaixo é uma propriedade que pode er acessada como um atributo
+    @property # serve apenas para indicar que a função abaixo é uma propriedade que pode ser acessada como um atributo
     def radius(self):
         return self._radius
     
