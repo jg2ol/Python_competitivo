@@ -1,0 +1,5 @@
+Link do site docs da biblioteca rich_:
+rich.readthedocs.io
+
+Lista de emojis da biblioteca rich:
+python -m rich.emoji
