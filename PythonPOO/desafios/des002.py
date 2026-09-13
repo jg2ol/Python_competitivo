@@ -7,7 +7,10 @@ class Produto:
         self.preco = preco
 
     def etiqueta(self):
-        return Panel(f"{self.nome:^30}\n{"-"*30}\n{f"R${self.preco:,.2f}":^30}", title="Produto", width=50)
+        return Panel(f"{self.nome.center(30, ' ')}\n{"-"*30}\n{f"R${self.preco:,.2f}".center(30, ' ')}", title="Produto", width=34)
 
-p = Produto("Celular", 1500)
-print(p.etiqueta())
+p1 = Produto("Celular", 1500)
+print(p1.etiqueta())
+
+p2 = Produto("Notebook", 4500)
+print(p2.etiqueta())

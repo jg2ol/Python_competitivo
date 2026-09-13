@@ -26,4 +26,4 @@ print(p1)
 print(p1.__doc__) # Dunder Attribrute
 print(p1.__dict__) # dicionário com os atributos da instância
 print(p1.__getstate__()) # mesmo que dict, porém, pode ser personalizado
-print(p1.__class__)
+print(p1.__class__) # self.__class__ --> nome da classe desse objeto
