@@ -1,17 +1,21 @@
 from rich import print, inspect
 # Herança em Python
 
+# Classe mãe - Super Class
 class Pessoa:
     def __init__(self, nome="", idade=0):
+        # todos os filhos dessa classe irão ter atributos 'nome' e 'idade'
         self.nome = nome
         self.idade = idade
 
+    # e também terão o método 'fazer_aniversario()'
     def fazer_aniversario(self):
         self.idade += 1
 
 
 class Aluno(Pessoa):
     def __init__(self, nome, idade, curso, turma):
+        # os filhos sempre devem iniciar primeiramente como filho da classe mãe
         super().__init__(nome, idade)
         self.curso = curso
         self.turma = turma
