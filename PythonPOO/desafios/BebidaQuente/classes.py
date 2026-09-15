@@ -17,7 +17,7 @@ class BebidaQuente(ABC):
         v = [self.ferver_agua(), self.misturar(), self.servir()]
         for x, conteudo in enumerate(v):
             print(f"{x+1}. {conteudo}")
-        print("--- Bebida Pronta ---")
+        print("--- Bebida Pronta ---\n")
 
 
 

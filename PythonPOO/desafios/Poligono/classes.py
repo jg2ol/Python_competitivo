@@ -13,7 +13,7 @@ class Poligono(ABC):
         pass
 
 class Quadrado(Poligono):
-    def __init__(self, lado):
+    def __init__(self, lado=1):
         super().__init__(4)
         self.lado = lado
 
@@ -25,7 +25,7 @@ class Quadrado(Poligono):
 
 
 class Circulo(Poligono):
-    def __init__(self, raio):
+    def __init__(self, raio=1):
         super().__init__(float("INF"))
         self.raio = raio
 
