@@ -1,12 +1,7 @@
 from abc import ABC, abstractmethod
 from rich import print
 from random import randint
-# mais p/ frente, fazer:
-# while True p/ interações
-# pergaminhos com golpes específicos de cada classe (um pergaminho pode ser uma classe)
-# ilustração com tabelas de vida de cada personagem com cores
-# verificar morte de personagens
-# adicionar personagens e reiterar a ilustração das barras de vida
+
 
 class Personagem(ABC):
     def __init__(self, nome, vida):
